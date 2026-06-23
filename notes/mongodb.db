@@ -1,0 +1,5 @@
+use studentDB 
+createCollection - creates a Collection
+updateOne 
+deleteOne
+find

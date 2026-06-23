@@ -1,0 +1,342 @@
+commit e223e6682a5e59cb9fcdf62142997edf16f00e91 (HEAD -> main, origin/main)
+Author: jahnavi <jahnavipatnam@gmail.com>
+Date:   Sun Oct 12 21:58:07 2025 +0530
+
+    Validation added for payment pages
+
+commit c2b4853af20bb83a20787f4608138fd752b2a67c
+Author: jahnavi <jahnavipatnam@gmail.com>
+Date:   Sun Oct 12 20:47:13 2025 +0530
+
+    added README_FULL
+
+commit 128843777f1fd0fa90c186225170aea818f763fa
+Author: jahnavi <jahnavipatnam@gmail.com>
+Date:   Sun Oct 12 18:07:22 2025 +0530
+
+    changed some form validations
+
+commit c56372acd07f96b8581cd4e06d2ff9e7d20c7512
+Author: jahnavi <jahnavipatnam@gmail.com>
+Date:   Sun Oct 12 16:44:28 2025 +0530
+
+    Admin signup page added
+
+commit 47563773c60fe60a12c3f6163123ad2595c2246c
+Author: jahnavi <jahnavipatnam@gmail.com>
+Date:   Wed Feb 26 14:27:36 2025 +0530
+
+    some changes
+
+commit 0da9ac5afa7ea4d5227a2a48246a69ce687425a8
+Author: jahnavi <jahnavipatnam@gmail.com>
+Date:   Mon Oct 6 23:42:44 2025 +0530
+
+    shifted to mongodb atlas
+
+commit 9b9d9f2e7b2a83f175475fd26a3d640392be9bfe
+Author: jahnavi <jahnavipatnam@gmail.com>
+Date:   Fri May 9 11:26:01 2025 +0530
+
+    search page modified, seeker_profile and payment forms validated
+
+commit c52f756bb9b7afcb5108a6def12bcf39f03f568d
+Author: jahnavi <jahnavipatnam@gmail.com>
+Date:   Thu May 8 21:21:49 2025 +0530
+
+    made admin earnings and payment dynamic
+
+commit dc9cf48d9f1f5c482e73d40accfd9fda839587a0
+Author: jahnavi <jahnavipatnam@gmail.com>
+Date:   Wed May 7 11:42:27 2025 +0530
+
+    schema done
+
+commit 3c265090dfedce74a1125f3ce9797e4e19bc01c7
+Author: jahnavi <jahnavipatnam@gmail.com>
+Date:   Wed Mar 19 14:10:16 2025 +0530
+
+    admin backend
+
+commit 8c07d484b88794e04d79297cd8266f6875572416
+Author: jahnavi <jahnavipatnam@gmail.com>
+Date:   Tue Mar 18 17:19:25 2025 +0530
+
+    modified flow
+
+commit c164f2c56137d0ca4f0adaf808663168a7edecdf
+Merge: a4d36a7 3ab5dd2
+Author: jahnavi <jahnavipatnam@gmail.com>
+Date:   Tue Mar 18 16:33:05 2025 +0530
+
+    search page etc
+
+commit a4d36a706debc6da69b32e3e8f5f798f50a2e182
+Author: jahnavi <jahnavipatnam@gmail.com>
+Date:   Tue Mar 18 16:18:44 2025 +0530
+
+    search page etc
+
+commit 3ab5dd27421c4412decceb439937718d37c45d84
+Author: rithika-2605 <rithikapeddamale2605@gmail.com>
+Date:   Tue Mar 18 12:27:54 2025 +0530
+
+    message
+
+commit 3f58ada052416b0f1a184334d23dc5c886d8711f
+Author: rithika-2605 <rithikapeddamale2605@gmail.com>
+Date:   Mon Mar 17 15:16:58 2025 +0530
+
+    message
+
+commit b2c7092a66545e87b1ee380913c21c08487a74cf
+Author: rithika-2605 <rithikapeddamale2605@gmail.com>
+Date:   Mon Mar 17 14:33:10 2025 +0530
+
+    message
+
+commit ce4ae202f9fdfe5ecfac58ba51376719fcd59e66
+Author: jahnavi <jahnavipatnam@gmail.com>
+Date:   Sun Mar 16 09:33:26 2025 +0530
+
+    deleted unnecessary files
+
+commit 248a318357f041528a4bc9ac0fb640ea2e09ee38
+Merge: 85a8f8a 1aca8a2
+Author: jahnavi <jahnavipatnam@gmail.com>
+Date:   Sat Mar 15 20:12:34 2025 +0530
+
+     helper dashbaord backend
+
+commit 85a8f8a6b436e26dc637858db14f8e783efdf5e3
+Merge: 260b5c3 b25e20e
+Author: jahnavi <jahnavipatnam@gmail.com>
+Date:   Sat Mar 15 20:08:46 2025 +0530
+
+    helper dashboard backend
+
+commit 1aca8a2cd756dc1cf8d92f4ddfdeffdd63a68fe9
+Author: rithika-2605 <rithikapeddamale2605@gmail.com>
+Date:   Tue Mar 11 23:17:08 2025 +0530
+
+    message
+
+commit 260b5c343f6f32f506b2c2177c58e064443edf7a
+Author: jahnavi <jahnavipatnam@gmail.com>
+Date:   Sun Mar 9 12:25:05 2025 +0530
+
+    signup login done, users.json in gitigore
+
+commit b25e20e3e2fafb8e7229cd74cb2ca7c524a1fad9
+Author: rithika-2605 <rithikapeddamale2605@gmail.com>
+Date:   Sun Mar 9 01:22:32 2025 +0530
+
+    message
+
+commit 58c73cb8329158837e3404da6f87efcea577d98f
+Author: rithika-2605 <rithikapeddamale2605@gmail.com>
+Date:   Sat Mar 8 23:14:28 2025 +0530
+
+    message
+
+commit 1e566ce0c17b4a05df9225d13af05e7513f29378
+Author: rithika-2605 <rithikapeddamale2605@gmail.com>
+Date:   Fri Mar 7 10:38:57 2025 +0530
+
+    commit-message
+
+commit 4e82a9ad108d20e35b93052a1c9fcca572205deb
+Author: jahnavi <jahnavipatnam@gmail.com>
+Date:   Sat Mar 1 15:49:25 2025 +0530
+
+    adding any unadded files
+
+commit fdef83e5a4f7d79dd334e4622a01d51f846e79d9
+Author: BHAVISHYA6 <bhavi5002@gmail.com>
+Date:   Tue Feb 25 15:06:55 2025 +0530
+
+    Add files via upload
+
+commit 795732abd021e58149f51a0e8412f8fc734c99ed
+Author: BHAVISHYA6 <bhavi5002@gmail.com>
+Date:   Tue Feb 25 15:02:21 2025 +0530
+
+    Add files via upload
+
+commit 46375005be713032e152fd7285b96f096c352327
+Author: saranya26-12 <saranya.y23@iiits.in>
+Date:   Tue Feb 25 15:01:16 2025 +0530
+
+    Add files via upload
+
+commit 2193cd106c9194672b035bec69dbbf58e3d2a203
+Author: jahnavi <jahnavipatnam@gmail.com>
+Date:   Tue Feb 18 15:53:38 2025 +0530
+
+    started with the home page, added serveral pages
+
+commit ad56c3534b21c074643e11e5254066fb01e7f1ec
+Author: jahnavi <jahnavipatnam@gmail.com>
+Date:   Mon Feb 17 12:35:47 2025 +0530
+
+    initial commit
+
+commit d8f34a9cb7c4f85c9e7b09e6c1dcf2e14a5c83b1 (HEAD -> main, origin/main)
+Merge: 2e9b3c4 f4e8a22
+Author: jahnavi <jahnavipatnam@gmail.com>
+Date:   Sun Oct 12 14:41:07 2025 +0530
+
+    merged all final changes for submission
+
+commit 4a4a8b6d5032cd6bac12ac65d3c81f549cacfedf
+Author: rithika-2605 <rithikapeddamale2605@gmail.com>
+Date:   Fri Mar 7 20:27:48 2025 +0530
+
+    updated
+
+commit 4d38cf282cb9f576427551e437bcf0c13e602361
+Author: rithika-2605 <rithikapeddamale2605@gmail.com>
+Date:   Fri Mar 7 19:29:08 2025 +0530
+
+    updated
+
+commit bbb3e8dfd05d23731851071a11e466cf8737f37f
+Author: rithika-2605 <rithikapeddamale2605@gmail.com>
+Date:   Fri Mar 7 18:03:29 2025 +0530
+
+    helper dashboard styles updated
+
+commit 26f38dce336067e476b3af1b37c4127cc36c76f4
+Author: rithika-2605 <rithikapeddamale2605@gmail.com>
+Date:   Fri Mar 7 13:45:55 2025 +0530
+
+    helper dashboard styles
+
+commit 1c6feac269d700760bdfd9c200dbf860bcd262c5
+Merge: 9b5305c 9d1d97d
+Author: Bhavishya <bhavi5002@gamil.com>
+Date:   Wed Mar 5 15:32:37 2025 +0530
+
+    merging
+
+commit 9d1d97d0a079c0e2796f359c316b5f6a9ed60b25
+Author: rithika-2605 <rithikapeddamale2605@gmail.com>
+Date:   Wed Mar 5 21:33:45 2025 +0530
+
+    messagee
+
+commit c62f8fdb4260d7ffd9e040b12638a42d464109ab
+Author: rithika-2605 <rithikapeddamale2605@gmail.com>
+Date:   Wed Mar 5 18:43:09 2025 +0530
+
+    messagee
+
+commit 9b5305c03045527b2e2e6a71876e810fc4a76ec4
+Merge: d1ebaec 9d36e0d
+Author: Bhavishya <bhavi5002@gamil.com>
+Date:   Wed Mar 5 15:19:55 2025 +0530
+
+    Merge branch 'main' of https://github.com/jah-navii/ServiceSphere-FSD
+
+commit d1ebaec747f8ee2d4a03420de539fead6614f606
+Author: Bhavishya <bhavi5002@gamil.com>
+Date:   Wed Mar 5 15:19:21 2025 +0530
+
+    search css
+
+commit 9d36e0d45204fa2950a2d8cbbe3737afd62f3b6d
+Merge: b24cb2d 332e86f
+Author: rithika-2605 <rithikapeddamale2605@gmail.com>
+Date:   Wed Mar 5 15:16:40 2025 +0530
+
+    messagee
+
+commit b24cb2d09b1cd856eb263561aca50f7c796d9876
+Author: rithika-2605 <rithikapeddamale2605@gmail.com>
+Date:   Wed Mar 5 15:14:22 2025 +0530
+
+    messagee
+
+Merge: 6e3d5e1 4a4a8b6
+Author: saranya26-12 <yadagirisaranya26@gmail.com>
+Date:   Wed Mar 5 10:43:46 2025 +0530
+
+    Merge branch 'main' of https://github.com/jah-navii/ServiceSphere-FSD done
+
+commit 6e3d5e13e228b1ccfe4cb0beff97e8b45cd86f09
+Author: saranya26-12 <yadagirisaranya26@gmail.com>
+Date:   Wed Mar 5 10:43:32 2025 +0530
+
+    adding booking form and cart pages
+
+commit 332e86f746a97a322d1141b58bcf3a2cb36ee9c4
+Author: Bhavishya <bhavi5002@gamil.com>
+Date:   Tue Mar 4 15:15:07 2025 +0530
+
+    seeker profile
+
+commit bddf29a72b1b639e4aad5463a3008e8a886e66e6
+Author: Bhavishya <bhavi5002@gamil.com>
+Date:   Sun Oct 12 15:12:05 2025 +0530
+
+    search page
+
+commit 9e292db9e66b66f4d711039213ca4b02a0b7be73
+Author: jahnavi <jahnavipatnam@gmail.com>
+Date:   Wed Feb 26 14:47:30 2025 +0530
+
+    added relevant folders
+
+commit 8baf1da489bf8454f04a69e64df82281579576bd
+Author: jahnavi <jahnavipatnam@gmail.com>
+Date:   Wed Feb 26 14:34:07 2025 +0530
+
+    added folders
+
+commit b03980857d39a0cf36eeb05c1c7ff18e88897045
+Author: jahnavi <jahnavipatnam@gmail.com>
+Date:   Tue Feb 25 23:59:42 2025 +0530
+
+    node initiated
+
+commit ff6d16efff4526896fb556f5cf992d8ee488d8db
+Author: Jahnavi Patnam <147068413+jah-navii@users.noreply.github.com>
+Date:   Sun Oct 12 00:00:13 2025 +0530
+
+    Add files via upload
+
+commit 0f8d46dd91e809d352ee73a159470379390bdbb3
+Author: jahnavi <jahnavipatnam@gmail.com>
+Date:   Tue Feb 25 23:11:14 2025 +0530
+
+    initial commit
+
+commit f4e8a227bcff48b71e52ce7a3a99df8ecf53b90a
+Author: sarayu-m23 <sarayu.m23@iiits.in>
+Date:   Thu Oct 10 17:23:42 2025 +0530
+
+    minor fixes on home and contact us page
+
+commit 5bc9a2b42e47e6fa57d38c019f72752af4c661d0
+Author: rithika-2605 <rithikapeddamale2605@gmail.com>
+Date:   Wed Oct 9 20:18:36 2025 +0530
+
+    fixed helper feedback tab and updated css
+
+commit 83fdc267b24c6c13d1e9c7b1a7a81c76d03fa7a0
+Author: saranya26-12 <yadagirisaranya26@gmail.com>
+Date:   Wed Oct 9 18:02:09 2025 +0530
+
+    payment page redirect fixed + review connected
+
+commit c58ae238af64b4a2399b4b0673c7d2efb3c94bb3
+Author: Bhavishya <bhavi5002@gamil.com>
+Date:   Tue Oct 8 21:37:58 2025 +0530
+
+    updated seeker profile with edit and save feature
+
+commit 2e9b3c47b12e55e36e3a1dcb1ce54d1e843c4cc9
+Author: jahnavi <jahnavipatnam@gmail.com>
+Date:   Mon Oct 7 23:55:16 2025 +0530
+
+    integrated all pages and fixed session handling for admin

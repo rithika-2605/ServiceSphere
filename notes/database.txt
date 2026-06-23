@@ -1,0 +1,113 @@
+Collections and Fields:
+
+1. users
+   - _id (ObjectId, Primary Key)
+   - name (String)
+   - email (String, Unique)
+   - password (String, Hashed)
+   - mobileNumber (String)
+   - address (String, Nullable)
+   - gender (String, Enum: ['Male', 'Female', 'Other'], Nullable)
+   - role (String, Enum: ['helper', 'seeker', 'admin'])
+   - aadharNumber (String, Unique, Nullable)
+   - createdAt (Date)
+   - updatedAt (Date)
+
+2. helperProfiles
+   - _id (ObjectId, Primary Key)
+   - userId (ObjectId, Foreign Key → users)
+   - serviceCategories (Array of Strings)
+   - pricePerService (Object, { serviceName: Number })
+   - availability (Array of Strings, Days and Time Slots)
+   - certifications (Array of Strings, File Paths)
+   - ratings (Number, Default: 0)
+   - createdAt (Date)
+   - updatedAt (Date)
+
+3. serviceRequests
+   - _id (ObjectId, Primary Key)
+   - serviceName (String)
+   - seekerId (ObjectId, Foreign Key → users)
+   - helperId (ObjectId, Foreign Key → users)
+   - date (Date)
+   - time (String)
+   - address (String)
+   - status (String, Enum: ['Pending', 'Accepted', 'Completed', 'Cancelled'])
+   - paymentStatus (String, Enum: ['Pending', 'Paid'])
+   - createdAt (Date)
+   - updatedAt (Date)
+
+4. helperEarnings
+   - _id (ObjectId, Primary Key)
+   - helperId (ObjectId, Foreign Key → users)
+   - serviceName (String)
+   - date (Date)
+   - seekerId (ObjectId, Foreign Key → users)
+   - earningAmount (Number)
+   - createdAt (Date)
+
+5. feedbacks
+   - _id (ObjectId, Primary Key)
+   - seekerId (ObjectId, Foreign Key → users)
+   - helperId (ObjectId, Foreign Key → users)
+   - rating (Number, Min: 1, Max: 5)
+   - review (String)
+   - createdAt (Date)
+
+6. bookings
+   - _id (ObjectId, Primary Key)
+   - seekerId (ObjectId, Foreign Key → users)
+   - helperId (ObjectId, Foreign Key → users)
+   - serviceName (String)
+   - date (Date)
+   - time (String)
+   - price (Number)
+   - status (String, Enum: ['Ongoing', 'Completed', 'Cancelled'])
+   - createdAt (Date)
+   - updatedAt (Date)
+
+7. contactMessages
+   - _id (ObjectId, Primary Key)
+   - senderId (ObjectId, Foreign Key → users)
+   - message (String)
+   - date (Date)
+
+8. payments
+   - _id (ObjectId, Primary Key)
+   - seekerId (ObjectId, Foreign Key → users)
+   - helperId (ObjectId, Foreign Key → users)
+   - serviceName (String)
+   - date (Date)
+   - time (String)
+   - price (Number)
+   - paymentMethod (String, Enum: ['Card', 'UPI', 'Net Banking'])
+   - status (String, Enum: ['Successful', 'Failed', 'Pending'])
+   - createdAt (Date)
+
+9. adminUsers
+   - _id (ObjectId, Primary Key)
+   - name (String)
+   - email (String, Unique)
+   - password (String, Hashed)
+   - role (String, Default: 'admin')
+   - createdAt (Date)
+   - updatedAt (Date)
+
+10. services
+   - _id (ObjectId, Primary Key)
+   - name (String, Unique)
+   - description (String)
+   - priceRange (Object, { min: Number, max: Number })
+   - createdAt (Date)
+   - updatedAt (Date)
+
+11. earningsOverview
+   - _id (ObjectId, Primary Key)
+   - helperId (ObjectId, Foreign Key → users)
+   - monthlyEarnings (Array of { month: String, amount: Number })
+   - serviceCategoryEarnings (Object, { category: amount })
+   - pendingPayments (Number)
+   - receivedPayments (Number)
+   - dailyEarningsTrends (Array of { date: String, amount: Number })
+   - topEarningHelpers (Array of { helperId: ObjectId, earnings: Number })
+   - createdAt (Date)
