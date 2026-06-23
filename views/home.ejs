@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Sphere</title>
+    <!-- <link rel="stylesheet" href="/styles/home.css"> -->
+    <link rel="stylesheet" href="/styles/search.css">
+    <style>
+        :root {
+            --cerulean: #007ea7;
+            --beige: #fffde7;
+            --white: #ffffff;
+            --black: #000000;
+        }
+        
+        .hero {
+            background-image: url('/pics/hero.jpg'); /* Your cleaning service image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            color: var(--black);
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 253, 231, 0.7); /* Proper beige overlay with transparency */
+        }
+        
+        .hero-content {
+            z-index: 1; /* Ensure content is above the overlay */
+            padding: 2.5rem;
+            max-width: 800px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            color: var(--cerulean);
+        }
+        
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            color: var(--black);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--cerulean);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: none;
+        }
+        
+        .cta-button:hover {
+            background-color: #0099cc; /* Slightly lighter cerulean */
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 126, 167, 0.3);
+        }
+        
+        .service-highlight {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1.5rem;
+        }
+        
+        .service-tag {
+            background-color: var(--beige);
+            color: var(--cerulean);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin: 0 0.5rem;
+            border: 1px solid var(--cerulean);
+        }
+    </style>
+</head>
+<body>
+    <%- include('partials/navbar') %>
+
+    <!-- Hero section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Professional Help - anytime.</h1>
+            <p>From spotless cleaning to skilled repairs, expert support for every task, big or small. Because a little help goes a long way.</p>
+            <a href="/search" class="cta-button">Book Now</a>
+        </div>
+    </section>
+    <!-- Hero section ends -->
+
+    <%- include('partials/footer') %>
+</body>
+</html>

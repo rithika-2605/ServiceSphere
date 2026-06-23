@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ServiceSphere - Helper Registration</title>
+  <link rel="stylesheet" href="/styles/helperRegistration.css">
+  <style>
+    .error-text {
+      color: red;
+      font-size: 0.85em;
+      margin-top: 4px;
+      display: none;
+    }
+    .invalid {
+      border-color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+  <dotlottie-player class="bg-animation" src="https://lottie.host/97ea0de2-8839-4b2e-92ce-455e8731f33c/WSoZpRrAis.lottie" background="transparent" speed="1" style="width: 700px; height: 700px; margin-top:100px;" loop autoplay></dotlottie-player>
+
+  <div class="registration-container">
+    <h1>Join ServiceSphere as a Helper</h1>
+
+    <% if (error) { %>
+      <div class="error-message">
+        <%= error %>
+      </div>
+    <% } %>
+
+    <form id="helper-registration-form" action="/signup/helper" method="POST">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" value="<%= name || '' %>" placeholder="Enter your full name" required>
+        <span class="error-text" id="name-error"></span>
+      </div>
+
+      <div class="form-group">
+        <label>Gender</label>
+        <div class="radio-group">
+          <input type="radio" id="male" name="gender" value="Male" <%= gender === 'Male' ? 'checked' : '' %> >
+          <label for="male">Male</label>
+
+          <input type="radio" id="female" name="gender" value="Female" <%= gender === 'Female' ? 'checked' : '' %> >
+          <label for="female">Female</label>
+        </div>
+        <span class="error-text" id="gender-error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="mobilenumber">Mobile Number</label>
+        <input type="tel" name="mobilenumber" id="mobilenumber" value="<%= mobilenumber || '' %>" placeholder="Enter your Mobile Number" required>
+        <span class="error-text" id="mobile-error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="aadharnumber">Aadhar Number</label>
+        <input type="number" name="aadharnumber" id="aadharnumber" value="<%= aadharnumber || '' %>" placeholder="Enter your Aadhar Number" required>
+        <span class="error-text" id="aadhar-error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="text" id="email" name="email" value="<%= email || '' %>" placeholder="Enter your email" required>
+        <span class="error-text" id="email-error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Create a password" required>
+        <span class="error-text" id="password-error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirmPassword" placeholder="Confirm your password" required>
+        <span class="error-text" id="confirm-error"></span>
+      </div>
+
+      <div class="form-group">
+        <button type="submit">Register</button>
+      </div>
+    </form>
+    <p>Already a helper? <a href="/login/helper">Login here</a></p>
+  </div>
+
+  <script>
+    const form = document.getElementById("helper-registration-form");
+
+    const nameInput = document.getElementById("name");
+    const genderInputs = document.querySelectorAll("input[name='gender']");
+    const mobileInput = document.getElementById("mobilenumber");
+    const aadharInput = document.getElementById("aadharnumber");
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+    const confirmPasswordInput = document.getElementById("confirm-password");
+
+    const nameError = document.getElementById("name-error");
+    const genderError = document.getElementById("gender-error");
+    const mobileError = document.getElementById("mobile-error");
+    const aadharError = document.getElementById("aadhar-error");
+    const emailError = document.getElementById("email-error");
+    const passwordError = document.getElementById("password-error");
+    const confirmError = document.getElementById("confirm-error");
+
+    // Regex Patterns
+    const nameRegex = /^[A-Za-z\s]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+    const mobileRegex = /^[0-9]{10}$/;
+    const aadharRegex = /^[0-9]{12}$/;
+
+    // Validation functions
+    function validateName() {
+      const value = nameInput.value.trim();
+      if (!value) nameError.textContent = "Name is required.";
+      else if (!nameRegex.test(value)) nameError.textContent = "Only letters and spaces allowed.";
+      else nameError.textContent = "";
+      nameError.style.display = nameError.textContent ? "block" : "none";
+      nameInput.classList.toggle("invalid", !!nameError.textContent);
+      return !nameError.textContent;
+    }
+
+    function validateGender() {
+      const selected = Array.from(genderInputs).some(r => r.checked);
+      genderError.textContent = selected ? "" : "Please select your gender.";
+      genderError.style.display = genderError.textContent ? "block" : "none";
+      return selected;
+    }
+
+    function validateMobile() {
+      const value = mobileInput.value.trim();
+      if (!value) mobileError.textContent = "Mobile number is required.";
+      else if (!mobileRegex.test(value)) mobileError.textContent = "Must be a valid 10-digit number.";
+      else mobileError.textContent = "";
+      mobileError.style.display = mobileError.textContent ? "block" : "none";
+      mobileInput.classList.toggle("invalid", !!mobileError.textContent);
+      return !mobileError.textContent;
+    }
+
+    function validateAadhar() {
+      const value = aadharInput.value.trim();
+      if (!value) aadharError.textContent = "Aadhar number is required.";
+      else if (!aadharRegex.test(value)) aadharError.textContent = "Must be a valid 12-digit number.";
+      else aadharError.textContent = "";
+      aadharError.style.display = aadharError.textContent ? "block" : "none";
+      aadharInput.classList.toggle("invalid", !!aadharError.textContent);
+      return !aadharError.textContent;
+    }
+
+    function validateEmail() {
+      const value = emailInput.value.trim();
+      if (!value) emailError.textContent = "Email is required.";
+      else if (!emailRegex.test(value)) emailError.textContent = "Invalid email format.";
+      else emailError.textContent = "";
+      emailError.style.display = emailError.textContent ? "block" : "none";
+      emailInput.classList.toggle("invalid", !!emailError.textContent);
+      return !emailError.textContent;
+    }
+
+    function validatePassword() {
+      const value = passwordInput.value;
+      if (!value) passwordError.textContent = "Password is required.";
+      else if (!passwordRegex.test(value))
+        passwordError.textContent = "At least 8 chars, one uppercase, lowercase, number, symbol.";
+      else passwordError.textContent = "";
+      passwordError.style.display = passwordError.textContent ? "block" : "none";
+      passwordInput.classList.toggle("invalid", !!passwordError.textContent);
+      return !passwordError.textContent;
+    }
+
+    function validateConfirmPassword() {
+      const confirm = confirmPasswordInput.value;
+      const password = passwordInput.value;
+      if (!confirm) confirmError.textContent = "Please confirm your password.";
+      else if (confirm !== password) confirmError.textContent = "Passwords do not match.";
+      else confirmError.textContent = "";
+      confirmError.style.display = confirmError.textContent ? "block" : "none";
+      confirmPasswordInput.classList.toggle("invalid", !!confirmError.textContent);
+      return !confirmError.textContent;
+    }
+
+    // Event listeners for real-time feedback
+    nameInput.addEventListener("input", validateName);
+    genderInputs.forEach(r => r.addEventListener("change", validateGender));
+    mobileInput.addEventListener("input", validateMobile);
+    aadharInput.addEventListener("input", validateAadhar);
+    emailInput.addEventListener("input", validateEmail);
+    passwordInput.addEventListener("input", () => {
+      validatePassword();
+      validateConfirmPassword();
+    });
+    confirmPasswordInput.addEventListener("input", validateConfirmPassword);
+
+    // Final form check
+    form.addEventListener("submit", (e) => {
+      const valid =
+        validateName() &&
+        validateGender() &&
+        validateMobile() &&
+        validateAadhar() &&
+        validateEmail() &&
+        validatePassword() &&
+        validateConfirmPassword();
+
+      if (!valid) e.preventDefault();
+    });
+  </script>
+</body>
+</html>
